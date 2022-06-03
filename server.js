@@ -34,6 +34,36 @@ app.get("/divide", (request, response) => {
     response.send(`${sum}`);
 });
 
+app.get("/add/:value1/:value2", (request, response) => {
+    let num1 = parseInt(request.params.value1);
+    let num2 = parseInt(request.params.value2);
+    console.log(`${num1} ${num2}`);
+    response.send(`${num1} ${num2}`);
+});
+
+app.get("/substract/:value1/:value2", (request, response) => {
+    let num1 = parseInt(request.params.value1);
+    let num2 = parseInt(request.params.value2);
+    console.log(`${num1} ${num2}`);
+    response.send(`${num1} ${num2}`);
+});
+
+app.get("/multiply/:value1/:value2", (request, response) => {
+    let num1 = parseInt(request.params.value1);
+    let num2 = parseInt(request.params.value2);
+    console.log(`${num1} ${num2}`);
+    response.send(`${num1} ${num2}`);
+});
+
+app.get("/divide/:value1/:value2", (request, response) => {
+    let num1 = parseInt(request.params.value1);
+    let num2 = parseInt(request.params.value2);
+    console.log(`${num1} ${num2}`);
+    response.send(`${num1} ${num2}`);
+});
+
+
+
 app.listen(PORT, () => {
   console.log(`Server is running in ${PORT}.`);
 });
